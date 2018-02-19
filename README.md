@@ -70,6 +70,8 @@ export default AirtableSerializer.extend();
 
 ## Models
 
+Your model's attributes should be named with camel case (i.e. `thisFieldName`). If your table has a column named `Name` (with the first letter capitalized), the attribute in your model must *also* be capitalized (i.e. `Name` in both). **Keep the names consistent**.
+
 If you want to skip persistance of certain attributes (ex. formula columns) add the `readOnly` option:
 
 ##### **`models/product.js`**:
@@ -88,6 +90,8 @@ export default DS.Model.extend({
 You can use all of the [API features](https://airtable.com/api) when querying Airtable:
 
 ##### **`routes/products.js`**:
+
+The table in your airtable base should be pluralized. For example, below we are querying for our `product` model -- so in AirTable, our table should be title `products`. (Unlike the fields, this is case insensitive.)
 
 ```JavaScript
 import Ember from 'ember';
