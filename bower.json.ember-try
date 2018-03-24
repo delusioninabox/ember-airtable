@@ -1,0 +1,12 @@
+{
+  "name": "ember-airtable",
+  "dependencies": {
+    "ember": "components/ember#beta",
+    "ember-cli-shims": "0.1.1",
+    "ember-qunit-notifications": "0.1.0",
+    "pretender": "^0.12.0"
+  },
+  "resolutions": {
+    "ember": "beta"
+  }
+}
