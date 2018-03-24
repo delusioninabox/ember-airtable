@@ -143,15 +143,10 @@ Contributing
 
 ### Linting
 
-<<<<<<< HEAD
-* `ember server`
-* Visit your app at http://localhost:4200.
-=======
 * `npm run lint:js`
 * `npm run lint:js -- --fix`
 
 ### Running tests
->>>>>>> 8f13148... message
 
 * `ember test` – Runs the test suite on the current Ember version
 * `ember test --server` – Runs the test suite in "watch mode"
