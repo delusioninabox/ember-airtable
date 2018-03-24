@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ember-airtable
 
 [![NPM](https://nodei.co/npm/ember-airtable.png)](https://npmjs.org/package/ember-airtable)
@@ -110,7 +109,7 @@ export default Ember.Route.extend({
       pageSize: 10,
       // A list of sort objects that specifies how the records will be ordered.
       sort: [{field: "name", direction: "desc"}],
-      // The name or ID of a view in the table. 
+      // The name or ID of a view in the table.
       view: 'active_products'
     });
   }
@@ -118,12 +117,6 @@ export default Ember.Route.extend({
 ```
 
 # Development
-=======
-my-addon
-==============================================================================
-
-[Short description of the addon.]
->>>>>>> 8f13148... message
 
 Installation
 ------------------------------------------------------------------------------
