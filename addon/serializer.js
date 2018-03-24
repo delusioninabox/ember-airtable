@@ -1,5 +1,6 @@
-import Ember from 'ember';
 import DS from 'ember-data';
+import { merge } from '@ember/polyfills';
+import { isNone } from '@ember/utils';
 
 import { pluralize } from 'ember-inflector';
 
@@ -18,7 +19,7 @@ export default DS.RESTSerializer.extend({
       delete payload.offset;
 
       payload[modelNamePlural].forEach((record) => {
-        Ember.merge(record, record.fields);
+        merge(record, record.fields);
         delete record.fields;
         record.created = record.createdTime;
         delete record.createdTime;
@@ -55,7 +56,7 @@ export default DS.RESTSerializer.extend({
     if(this.keyForRelationship) {
       key = this.keyForRelationship(key, "belongsTo", "serialize");
     }
-    json[key] = Ember.isNone(belongsTo) ? [] : [ belongsTo ];
+    json[key] = isNone(belongsTo) ? [] : [ belongsTo ];
   },
 
   serializeHasMany(snapshot, json, relationship) {
@@ -66,7 +67,7 @@ export default DS.RESTSerializer.extend({
     if(this.keyForRelationship) {
       key = this.keyForRelationship(key, "hasMany", "serialize");
     }
-    json[key] = Ember.isNone(hasMany) ? [] : hasMany;
+    json[key] = isNone(hasMany) ? [] : hasMany;
   },
 
   serializeAttribute(snapshot, json, key, attribute) {

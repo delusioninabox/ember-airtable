@@ -1,13 +1,15 @@
 import AirtableAdapter from "ember-airtable/adapter";
 
 export default AirtableAdapter.extend({
+  init() {
+    this._super(...arguments);
+    // API Version + Base ID
+    this.namespace = 'v0/REPLACE_WITH_YOUR_BASE_ID',
 
-  // API Version + Base ID
-  namespace: 'v0/REPLACE_WITH_YOUR_BASE_ID',
-
-  headers: {
-    'Accept': 'application/json',
-    // API Token Key
-    'Authorization': `Bearer REPLACE_WITH_YOUR_API_KEY`
+    this.headers = {
+      'Accept': 'application/json',
+      // API Token Key
+      'Authorization': `Bearer REPLACE_WITH_YOUR_API_KEY`
+    }
   }
 });

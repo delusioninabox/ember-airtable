@@ -1,5 +1,5 @@
-import Ember from 'ember';
 import { moduleForModel, test } from 'ember-qunit';
+import { run } from '@ember/runloop';
 
 moduleForModel('product', 'Unit | Serializer | product', {
   needs: ['serializer:application',
@@ -30,7 +30,7 @@ test('it serializes records', function(assert) {
   let record = this.subject();
   let serializedRecord;
 
-  Ember.run(function(){
+  run(function(){
     record.set('name', 'testName');
     record.set('formula_readonly', 'testreadonly');
     serializedRecord = record.serialize();
@@ -39,11 +39,11 @@ test('it serializes records', function(assert) {
     assert.equal(serializedRecord['formula_readonly'], undefined);
   });
 
-  //Ember.run(function(){
+  //run(function(){
     //record.save();
   //});
 
-  //Ember.run(function(){
+  //run(function(){
     //let [ request ] = mockServer.handledRequests;
     //let body = request.requestBody;
     //let requestPayload = JSON.parse(body);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ember-airtable
 
 [![NPM](https://nodei.co/npm/ember-airtable.png)](https://npmjs.org/package/ember-airtable)
@@ -117,26 +118,60 @@ export default Ember.Route.extend({
 ```
 
 # Development
+=======
+my-addon
+==============================================================================
 
-## Installation
+[Short description of the addon.]
+>>>>>>> 8f13148... message
 
-* `git clone` this repository
+Installation
+------------------------------------------------------------------------------
+
+```
+ember install my-addon
+```
+
+
+Usage
+------------------------------------------------------------------------------
+
+[Longer description of how to use the addon in apps.]
+
+
+Contributing
+------------------------------------------------------------------------------
+
+### Installation
+
+* `git clone <repository-url>`
+* `cd my-addon`
 * `npm install`
-* `bower install`
 
-## Running
+### Linting
 
+<<<<<<< HEAD
 * `ember server`
 * Visit your app at http://localhost:4200.
+=======
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
 
-## Running Tests
+### Running tests
+>>>>>>> 8f13148... message
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
 
-## Building
+### Running the dummy application
 
-* `ember build`
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).

@@ -1,5 +1,5 @@
-import Ember from 'ember';
 import { moduleForModel, test } from 'ember-qunit';
+import { run } from '@ember/runloop';
 //import Pretender from 'pretender';
 
 //// ToDo: Install ember-cli-faker
@@ -34,7 +34,7 @@ test('it serializes belongsTo', function(assert) {
   //});
   let store = this.store();
 
-  Ember.run(() => {
+  run(() => {
     let component = store.createRecord('component', {
       name: 'testComponent'
     });

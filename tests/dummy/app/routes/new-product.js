@@ -1,6 +1,6 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
 
-export default Ember.Route.extend({
+export default Route.extend({
   model() {
     return this.store.createRecord('product');
   },
@@ -15,7 +15,9 @@ export default Ember.Route.extend({
       return product.save().then(() => {
         //return this.transitionTo('products');
       }, (error) => {
-        console.log('error', error);
+        // uncomment for debugging
+        return error;
+        //console.log('error', error);
       });
     }
   }
